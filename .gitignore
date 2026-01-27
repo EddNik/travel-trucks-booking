@@ -3,16 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-<<<<<<< HEAD
-.pnp.js
-=======
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
->>>>>>> 9e29de1 (project initialization root-layout global.css favicon.icon install axios zustand clsx react-hook-form react-hot-toast modern-normalize)
 
 # testing
 /coverage
