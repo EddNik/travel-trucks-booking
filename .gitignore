@@ -32,17 +32,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-
-# local env files
-.env*.local
-.env
-=======
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
 .env*
->>>>>>> 9e29de1 (project initialization root-layout global.css favicon.icon install axios zustand clsx react-hook-form react-hot-toast modern-normalize)
 
 # vercel
 .vercel
