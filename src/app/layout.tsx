@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import clsx from "clsx";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { Header } from "../components/Header/Header";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import TanStackProvider from "../components/TanStackProvider/TanStackProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,21 +15,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TravelTrucks | Rent Your Best Camper",
+  title: "TravelTrucks",
   description:
     "Find and book the best campervans for your journey across Ukraine.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "TravelTrucks | Rent Your Best Camper",
+    title: "TravelTrucks",
     description:
       "Find and book the best campervans for your journey across Ukraine.",
     url: "https://traveltrucks-booking.vercel.app/",
     siteName: "TravelTrucks",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "TravelTrucks Open Graph Image",
@@ -41,7 +45,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, inter.variable)}>{children}</body>
+      <body className={clsx(inter.className, inter.variable)}>
+        <TanStackProvider>
+          <Header />
+          <main>{children}</main>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </TanStackProvider>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: "#363636",
+              color: "#fff",
+              fontSize: "16px",
+              borderRadius: "10px",
+              maxWidth: "100%",
+            },
+          }}
+        />
+      </body>
     </html>
   );
 }

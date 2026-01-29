@@ -1,0 +1,35 @@
+.section {
+  width: 100%;
+  max-width: 1440px;
+  background-image: url("/img/hero-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 260px 0 260px 64px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--inputs);
+}
+
+.heroBtn {
+  width: 173px !important;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 67%;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 133%;
+}

@@ -62,6 +62,7 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  text-decoration: none;
 }
 
 img {
@@ -70,9 +71,8 @@ img {
   height: auto;
 }
 
-.layout-container {
+.layoutContainer {
   margin: 0 auto;
-  padding: 48px 64px;
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -81,7 +81,7 @@ img {
   overflow: hidden;
 }
 
-.visually-hidden {
+.visuallyHidden {
   position: absolute;
   width: 1px;
   height: 1px;

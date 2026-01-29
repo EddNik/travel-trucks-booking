@@ -1,0 +1,32 @@
+.header {
+  padding: 1rem 2rem;
+  color: white;
+  border-bottom: 1px solid var(--badges);
+  background-color: var(--inputs);
+}
+
+.headerContainer {
+  display: flex;
+  gap: 450px;
+  align-items: center;
+  width: 100%;
+}
+
+.navList {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLink {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--main);
+}
+.navLink:hover,
+.active {
+  color: var(--button-hover);
+}
