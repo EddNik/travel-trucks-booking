@@ -33,7 +33,7 @@ export const useSelectedCampersStore = create<SelectedCampers>()(
       clearSelectedCampers: () => set({ selectedCampers: [] }),
     }),
     {
-      name: "selected-campers-storage", // Ім'я для збереження в localStorage
+      name: "selected-campers-storage",
       storage: createJSONStorage(() => localStorage),
     },
   ),

@@ -5,8 +5,8 @@ import { getCampers } from "../api";
 const initialFilter: Filters = {
   location: "",
   equipment: [],
-  form: "panelTruck",
-  transmission: "manual",
+  form: null,
+  transmission: null,
 };
 
 interface CampersState {
@@ -20,7 +20,7 @@ interface CampersState {
 
   setFilters: (newFilters: Partial<Filters>) => void;
   resetFilters: () => void;
-  fetchCampers: (page?: number) => Promise<void>;
+  getCampers: (page?: number) => Promise<void>;
   handleLoadMore: () => void;
 }
 
@@ -45,7 +45,7 @@ export const useCampersStore = create<CampersState>((set, get) => ({
       page: 1,
     }),
 
-  fetchCampers: async (page = 1) => {
+  getCampers: async (page = 1) => {
     const { filters, campers } = get();
     set({ isLoading: true, error: null });
 
@@ -59,15 +59,12 @@ export const useCampersStore = create<CampersState>((set, get) => ({
         isLoading: false,
       });
     } catch (error) {
-      console.error(error);
-      set({ error: "Failed to fetch campers", isLoading: false });
-    } finally {
-      set({ isLoading: false });
+      set({ error: `Failed to fetch campers / ${error}`, isLoading: false });
     }
   },
 
   handleLoadMore: async () => {
-    const { page, fetchCampers } = get();
-    await fetchCampers(page + 1);
+    const { page, getCampers } = get();
+    await getCampers(page + 1);
   },
 }));

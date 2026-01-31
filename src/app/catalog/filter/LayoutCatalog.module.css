@@ -1,0 +1,19 @@
+.catalogContainer {
+  display: flex;
+  gap: 64px;
+  flex-direction: row;
+  padding: 48px 64px 0 64px;
+}
+
+.sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 360px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.catalogWrapper {
+  flex-grow: 1;
+  width: 888px;
+}

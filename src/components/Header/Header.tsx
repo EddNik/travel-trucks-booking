@@ -33,10 +33,10 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                href="/catalog"
+                href="/catalog/filter"
                 className={clsx(
                   css.navLink,
-                  pathname === "/catalog" && css.active,
+                  pathname === "/catalog/filter" && css.active,
                 )}
               >
                 Catalog

@@ -14,7 +14,7 @@ export const Hero = () => {
           </p>
         </div>
         <Link
-          href={"/catalog"}
+          href={"/catalog/filter"}
           className={clsx(css.heroBtn, cssBtn.btnBase, cssBtn.primary)}
         >
           View Now

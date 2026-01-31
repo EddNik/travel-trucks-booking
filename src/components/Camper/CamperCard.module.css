@@ -1,0 +1,140 @@
+.card {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--white);
+  padding: 24px;
+  gap: 24px;
+  border: 1px solid var(--gray-light);
+  padding: 24px;
+  /* width: 888px; */
+  width: 100%
+}
+
+.imageWrapper {
+  position: relative;
+  width: 292px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--main);
+}
+
+.priceGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+}
+
+.heartBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.heartActive {
+  stroke: #e44848;
+  fill: #e44848;
+}
+
+.subHeader {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration-skip-ink: none;
+  color: var(--main);
+}
+
+.ratingWrapper {
+  text-decoration: underline;
+}
+
+.ratingWrapper,
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.starIcon {
+  display: none;
+}
+
+.ratingText {
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  font-weight: 400;
+  color: var(--text);
+}
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background-color: var(--badges);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--main)
+}
+
+.linkButton {
+  display: inline-block;
+}

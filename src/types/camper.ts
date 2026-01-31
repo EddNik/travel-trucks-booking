@@ -43,9 +43,14 @@ export interface CamperReviews {
 
 export type Equipment =
   | "AC"
-  | "kitchen"
+  | "Kitchen"
   | "TV"
-  | "bathroom";
+  | "Bathroom"
+  | "Gas"
+  | "Microwave"
+  | "Refrigerator"
+  | "Radio"
+  | "Water";
 
 export interface Filters {
   location: string;

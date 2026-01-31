@@ -34,18 +34,28 @@ export const getCampers = async (
     },
   };
 
-  const { data } = await api.get<CamperResponse>("/campers", options);
   try {
+    const { data } = await api.get<CamperResponse>("/campers", options);
+
     return {
       items: data.items,
       total: data.total,
     };
   } catch (error) {
+    if (axios.isAxiosError(error) && error.response?.status === 404) {
+      return { items: [], total: 0 };
+    }
     throw error;
   }
 };
-
 export const getCamperById = async (id: string): Promise<Camper> => {
-  const { data } = await api.get<Camper>(`/campers/${id}`);
-  return data;
+  try {
+    const { data } = await api.get(`/campers/${id}`);
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response?.status === 404) {
+      throw new Error(`Camper with id ${id} not found`);
+    }
+    throw error;
+  }
 };

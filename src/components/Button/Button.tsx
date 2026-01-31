@@ -11,11 +11,13 @@ export const Button = ({
   children,
   variant = "primary",
   className,
+  ...props
 }: ButtonProps) => {
   return (
     <button
       type="button"
       className={clsx(css.btnBase, css[variant], className)}
+      {...props}
     >
       {children}
     </button>
