@@ -1,0 +1,24 @@
+.gallery {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+}

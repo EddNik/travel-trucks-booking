@@ -1,5 +1,4 @@
-"use client"; // Важливо для роботи хуків
-
+"use client";
 import { useSelectedCampersStore } from "@/lib/store/selectedCampersStore";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +7,9 @@ import { Camper } from "@/types/camper";
 import { FaStar } from "react-icons/fa";
 
 import SpriteIcon from "../SpriteIcon/SpriteIcon";
-import { Button } from "@/components/Button/Button";
 import clsx from "clsx";
 import cssBtn from "../Button/Button.module.css";
+import FeatureList from "../FeatureList/FeatureList";
 
 interface CamperCardProps {
   camper: Camper;
@@ -85,28 +84,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
           {truncateText(camper.description, 100)}
         </p>
 
-        <ul className={css.featuresList}>
-          <li className={css.featureItem}>
-            <SpriteIcon id="transmission" width={20} height={20} />
-            <span>{camper.transmission}</span>
-          </li>
-          <li className={css.featureItem}>
-            <SpriteIcon id="petrol" width={20} height={20} />
-            <span>{camper.engine}</span>
-          </li>
-          {camper.kitchen && (
-            <li className={css.featureItem}>
-              <SpriteIcon id="kitchen" width={20} height={20} />
-              <span>Kitchen</span>
-            </li>
-          )}
-          {camper.AC && (
-            <li className={css.featureItem}>
-              <SpriteIcon id="ac" width={20} height={20} />
-              <span>AC</span>
-            </li>
-          )}
-        </ul>
+        <FeatureList camper={camper} />
 
         <Link
           href={`/catalog/${camper.id}`}

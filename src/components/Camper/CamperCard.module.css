@@ -7,8 +7,7 @@
   gap: 24px;
   border: 1px solid var(--gray-light);
   padding: 24px;
-  /* width: 888px; */
-  width: 100%
+  width: 100%;
 }
 
 .imageWrapper {
@@ -40,7 +39,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
-  white-space: nowrap;
   overflow: hidden;
   color: var(--main);
 }
@@ -114,25 +112,6 @@
 
   font-weight: 400;
   color: var(--text);
-}
-
-.featuresList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.featureItem {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  border-radius: 100px;
-  background-color: var(--badges);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--main)
 }
 
 .linkButton {
