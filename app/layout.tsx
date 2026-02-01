@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { Header } from "../components/Header/Header";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import TanStackProvider from "../components/TanStackProvider/TanStackProvider";
 
 const inter = Inter({
@@ -49,7 +48,6 @@ export default function RootLayout({
         <TanStackProvider>
           <Header />
           <main>{children}</main>
-          <ReactQueryDevtools initialIsOpen={false} />
         </TanStackProvider>
         <Toaster
           position="top-center"
