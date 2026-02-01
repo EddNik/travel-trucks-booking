@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "TravelTrucks",
     description:
       "Find and book the best campervans for your journey across Ukraine.",
-    url: "https://traveltrucks-booking.vercel.app/",
+    url: "https://travel-trucks-booking-snowy.vercel.app/",
     siteName: "TravelTrucks",
     images: [
       {
