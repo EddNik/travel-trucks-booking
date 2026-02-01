@@ -7,6 +7,7 @@ const initialFilter: Filters = {
   equipment: [],
   form: null,
   transmission: null,
+  engine: null,
 };
 
 interface CampersState {

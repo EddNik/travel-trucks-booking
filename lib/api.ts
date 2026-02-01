@@ -18,13 +18,14 @@ export const getCampers = async (
   limit: number = 5,
   filters?: Filters,
 ): Promise<CamperResponse> => {
-  const { location, form, transmission, equipment } = filters || {};
+  const { location, form, transmission, equipment, engine } = filters || {};
 
   const options = {
     params: {
       ...(location && { location }),
       ...(form && { form }),
       ...(transmission && { transmission }),
+      ...(engine && { engine }),
       ...equipment?.reduce(
         (setEquip, equip) => ({ ...setEquip, [equip]: true }),
         {},

@@ -4,7 +4,12 @@ import { useState } from "react";
 import clsx from "clsx";
 
 import { useCampersStore } from "../../../../lib/store/campersStore";
-import { Equipment, VehicleType, Transmission } from "../../../../types/camper";
+import {
+  Equipment,
+  VehicleType,
+  Transmission,
+  Engine,
+} from "../../../../types/camper";
 import { Button } from "../../../../components/Button/Button";
 import css from "./SidebarFilters.module.css";
 
@@ -30,6 +35,12 @@ const TYPE_VEHICLE: { id: VehicleType; label: string; icon: string }[] = [
   { id: "alcove", label: "Alcove", icon: "alcove" },
 ];
 
+const ENGINE: { id: Engine; label: string; icon: string }[] = [
+  { id: "petrol", label: "Petrol", icon: "petrol" },
+  { id: "diesel", label: "Diesel", icon: "petrol" },
+  { id: "hybrid", label: "Hybrid", icon: "petrol" },
+];
+
 export default function CatalogSidebarPage() {
   const { setFilters, getCampers, isLoading } = useCampersStore();
 
@@ -37,6 +48,7 @@ export default function CatalogSidebarPage() {
   const [equipment, setEquipment] = useState<Equipment[]>([]);
   const [vehicleType, setVehicleType] = useState<VehicleType | null>(null);
   const [transmission, setTransmission] = useState<Transmission | null>(null);
+  const [engine, setEngine] = useState<Engine | null>(null);
 
   const locationChange = (value: string) => {
     const regex = /^[a-zA-Z\s,]*$/;
@@ -53,6 +65,10 @@ export default function CatalogSidebarPage() {
     );
   };
 
+  const toggleEngine = (id: Engine) => {
+    setEngine((prev) => (prev === id ? null : id));
+  };
+
   const toggleTransmission = () => {
     setTransmission((prev) => (prev === "automatic" ? null : "automatic"));
   };
@@ -67,6 +83,7 @@ export default function CatalogSidebarPage() {
       equipment,
       form: vehicleType,
       transmission,
+      engine,
     });
 
     getCampers(1);
@@ -137,6 +154,25 @@ export default function CatalogSidebarPage() {
                 type="button"
                 className={clsx(css.filterButton, isActive && css.active)}
                 onClick={() => toggleVehicleType(item.id)}
+              >
+                <svg className={css.icon} width={32} height={32}>
+                  <use href={`/sprite.svg#${item.icon}`} />
+                </svg>
+                <span>{item.label}</span>
+              </button>
+            );
+          })}
+        </div>
+        <h3 className={css.subtitle}>Vehicle engine</h3>
+        <div className={css.filterGroup}>
+          {ENGINE.map((item) => {
+            const isActive = engine === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                className={clsx(css.filterButton, isActive && css.active)}
+                onClick={() => toggleEngine(item.id)}
               >
                 <svg className={css.icon} width={32} height={32}>
                   <use href={`/sprite.svg#${item.icon}`} />

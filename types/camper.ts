@@ -57,6 +57,7 @@ export interface Filters {
   equipment: Equipment[];
   form: VehicleType | null;
   transmission: Transmission | null;
+  engine: Engine | null;
 }
 
 export interface Booking {
