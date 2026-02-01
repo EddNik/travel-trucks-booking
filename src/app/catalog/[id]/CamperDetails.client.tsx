@@ -3,7 +3,6 @@
 import Gallery from "@/components/Camper/Gallery";
 import CamperInfo from "@/components/Camper/CamperInfo";
 import SpriteIcon from "@/components/SpriteIcon/SpriteIcon";
-import BookingForm from "@/components/BookingForm/BookingForm";
 import { useParams } from "next/navigation";
 import { getCamperById } from "@/lib/api";
 import css from "./CamperDetails.module.css";
@@ -43,7 +42,7 @@ function CamperDetailsClient() {
           <div className={css.subHeader}>
             <div className={css.ratingWrapper}>
               <span className={css.ratingText}>
-                <FaStar color="gold" style={{ marginRight: "4px" }} />
+                <FaStar color="var(--rating)" style={{ marginRight: "4px" }} />
                 {camper.rating} ({camper.reviews.length} Reviews)
               </span>
             </div>

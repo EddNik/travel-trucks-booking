@@ -4,10 +4,9 @@ import { Button } from "../Button/Button";
 import css from "./BookingForm.module.css";
 import * as Yup from "yup";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-import { bookCamper } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { AxiosError } from "axios";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 interface BookingFormValues {
   name: string;
