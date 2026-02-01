@@ -6,15 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "push": "git add .; git commit -m 'update'; git push;"
   },
   "dependencies": {
     "@tanstack/react-query-devtools": "^5.91.2",
+    "axios": "^1.13.4",
+    "clsx": "^2.1.1",
+    "formik": "^2.4.9",
+    "izitoast": "^1.4.0",
+    "modern-normalize": "^3.0.1",
     "next": "16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
-    "use-debounce": "^10.1.0"
+    "toast": "^0.5.4",
+    "use-debounce": "^10.1.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@types/node": "^20",

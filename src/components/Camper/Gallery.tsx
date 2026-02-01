@@ -12,7 +12,12 @@ const Gallery = ({ gallery }: GalleryProps) => {
         {gallery.map((image, index) => (
           <li key={index}>
             <div>
-              <Image src={image.original} alt="Camper photo"></Image>
+              <Image
+                src={image.original}
+                alt="Camper photo"
+                width={292}
+                height={312}
+              ></Image>
             </div>
           </li>
         ))}

@@ -12,7 +12,13 @@ const SpriteIcon = ({
   className,
 }: SpriteIconProps) => {
   return (
-    <svg width={width} height={height} className={className} aria-hidden="true">
+    <svg
+      width={width}
+      height={height}
+      className={className}
+      aria-hidden="true"
+      fill="currentColor"
+    >
       <use href={`/sprite.svg#${id}`} />
     </svg>
   );

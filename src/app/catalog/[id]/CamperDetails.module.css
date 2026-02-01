@@ -1,39 +1,20 @@
-.card {
+.container {
   display: flex;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: var(--white);
-  padding: 24px;
-  gap: 24px;
-  border: 1px solid var(--gray-light);
-  padding: 24px;
-  width: 100%;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 292px;
-  border-radius: 10px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.image {
-  object-fit: cover;
-}
-
-.content {
-  display: flex;
+  gap: 64px;
   flex-direction: column;
-  gap: 24px;
+  padding: 48px 64px 80px 64px;
 }
 
-.titleWrapper {
+.header {
+  margin-bottom: 28px;
+}
+
+/* .titleWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
-}
+} */
 
 .title {
   font-size: 24px;
@@ -56,17 +37,6 @@
   color: var(--main);
 }
 
-.heartBtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.heartActive {
-  stroke: var(--button);
-  fill: var(--button);
-}
-
 .subHeader {
   display: flex;
   gap: 16px;
@@ -77,6 +47,7 @@
   line-height: 150%;
   text-decoration-skip-ink: none;
   color: var(--main);
+  margin-bottom: 16px;
 }
 
 .ratingWrapper {
@@ -99,21 +70,4 @@
   text-decoration: underline;
   display: flex;
   align-items: center;
-}
-
-.description {
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-
-  font-weight: 400;
-  color: var(--text);
-}
-
-.linkButton {
-  display: inline-block;
 }

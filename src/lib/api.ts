@@ -1,4 +1,4 @@
-import { Camper, Filters } from "../types/camper";
+import { Booking, Camper, Filters } from "../types/camper";
 import axios from "axios";
 
 const api = axios.create({
@@ -59,3 +59,12 @@ export const getCamperById = async (id: string): Promise<Camper> => {
     throw error;
   }
 };
+
+export async function bookCamper(newBooking: Booking): Promise<Booking> {
+  try {
+    const { data } = await api.post<Booking>("/campers/booking", newBooking);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}

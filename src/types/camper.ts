@@ -58,3 +58,10 @@ export interface Filters {
   form: VehicleType | null;
   transmission: Transmission | null;
 }
+
+export interface Booking {
+  name: string;
+  email: string;
+  date: string;
+  comment: string;
+}

@@ -5,3 +5,59 @@
   padding: 44px 52px;
   justify-content: flex-start;
 }
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+  padding-bottom: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e44848; /* Accent color */
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 44px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .detailsColumn {
+    width: 50%;
+  }
+
+  .formColumn {
+    width: 448px;
+    flex-shrink: 0;
+  }
+}

@@ -62,12 +62,6 @@ const CamperCard = ({ camper }: CamperCardProps) => {
 
           <div className={css.subHeader}>
             <div className={css.ratingWrapper}>
-              <SpriteIcon
-                id="icon-star"
-                width={16}
-                height={16}
-                className={css.starIcon}
-              />
               <span className={css.ratingText}>
                 <FaStar color="gold" style={{ marginRight: "4px" }} />
                 {camper.rating} ({camper.reviews.length} Reviews)
