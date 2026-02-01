@@ -10,14 +10,14 @@ import css from "./SidebarFilters.module.css";
 
 const EQUIPMENT: { id: Equipment; label: string; icon: string }[] = [
   { id: "AC", label: "AC", icon: "ac" },
-  { id: "Kitchen", label: "Kitchen", icon: "kitchen" },
+  { id: "kitchen", label: "Kitchen", icon: "kitchen" },
   { id: "TV", label: "TV", icon: "tv" },
-  { id: "Bathroom", label: "Bathroom", icon: "bathroom" },
-  { id: "Gas", label: "GAS", icon: "gas-stove" },
-  { id: "Microwave", label: "Microwave", icon: "microwave" },
-  { id: "Refrigerator", label: "Refrigerator", icon: "fridge" },
-  { id: "Radio", label: "Radio", icon: "radio" },
-  { id: "Water", label: "Water", icon: "water" },
+  { id: "bathroom", label: "Bathroom", icon: "bathroom" },
+  { id: "gas", label: "GAS", icon: "gas-stove" },
+  { id: "microwave", label: "Microwave", icon: "microwave" },
+  { id: "refrigerator", label: "Refrigerator", icon: "fridge" },
+  { id: "radio", label: "Radio", icon: "radio" },
+  { id: "water", label: "Water", icon: "water" },
 ];
 
 const TYPE_VEHICLE: { id: VehicleType; label: string; icon: string }[] = [
