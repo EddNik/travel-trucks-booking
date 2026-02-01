@@ -36,6 +36,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
           fill
           className={css.image}
           priority={false}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
@@ -63,7 +64,7 @@ const CamperCard = ({ camper }: CamperCardProps) => {
           <div className={css.subHeader}>
             <div className={css.ratingWrapper}>
               <span className={css.ratingText}>
-                <FaStar color="gold" style={{ marginRight: "4px" }} />
+                <FaStar color="var(--rating)" style={{ marginRight: "4px" }} />
                 {camper.rating} ({camper.reviews.length} Reviews)
               </span>
             </div>
@@ -80,12 +81,14 @@ const CamperCard = ({ camper }: CamperCardProps) => {
 
         <FeatureList camper={camper} />
 
-        <Link
-          href={`/catalog/${camper.id}`}
-          className={clsx(css.heroBtn, cssBtn.btnBase, cssBtn.primary)}
-        >
-          Show more
-        </Link>
+        <div>
+          <Link
+            href={`/catalog/${camper.id}`}
+            className={clsx(css.heroBtn, cssBtn.btnBase, cssBtn.primary)}
+          >
+            Show more
+          </Link>
+        </div>
       </div>
     </li>
   );

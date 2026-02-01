@@ -12,7 +12,6 @@ import clsx from "clsx";
 interface PageProps {
   params: Promise<{ id: string }>;
 }
-// Функція для генерації метаданих (опціонально)
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const camper = await getCamperById(id);
@@ -23,8 +22,6 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function CamperDetailsPage({ params }: PageProps) {
-  // Завантажуємо дані на сервері
-
   const queryClient = new QueryClient();
   const id = (await params).id;
 

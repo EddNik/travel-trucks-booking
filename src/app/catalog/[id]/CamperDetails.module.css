@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  gap: 64px;
   flex-direction: column;
   padding: 48px 64px 80px 64px;
 }
@@ -8,13 +7,6 @@
 .header {
   margin-bottom: 28px;
 }
-
-/* .titleWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-} */
 
 .title {
   font-size: 24px;
@@ -61,13 +53,25 @@
   justify-content: flex-start;
   gap: 4px;
 }
-
-.starIcon {
-  display: none;
-}
-
 .ratingText {
   text-decoration: underline;
   display: flex;
   align-items: center;
 }
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  color: var(--text);
+  margin-bottom: 60px;
+}
+
+/* .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding: 44px 52px;
+  justify-content: flex-start;
+} */

@@ -1,5 +1,6 @@
 import { Camper } from "@/types/camper";
 import Image from "next/image";
+import css from "./Galary.module.css";
 
 interface GalleryProps {
   gallery: Camper["gallery"];
@@ -8,7 +9,7 @@ interface GalleryProps {
 const Gallery = ({ gallery }: GalleryProps) => {
   return (
     <>
-      <ul>
+      <ul className={css.gallery}>
         {gallery.map((image, index) => (
           <li key={index}>
             <div>
@@ -17,7 +18,9 @@ const Gallery = ({ gallery }: GalleryProps) => {
                 alt="Camper photo"
                 width={292}
                 height={312}
-              ></Image>
+                priority={false}
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </li>
         ))}

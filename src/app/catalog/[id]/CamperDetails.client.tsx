@@ -58,16 +58,11 @@ function CamperDetailsClient() {
           </div>
         </div>
 
-        {/* Gallery Section */}
         <Gallery gallery={camper.gallery} />
 
-        {/* Description */}
         <p className={css.description}>{camper.description}</p>
 
-        {/* Info & Tabs Section */}
         <CamperInfo camper={camper} />
-
-        <BookingForm />
       </div>
     </>
   );
