@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useCampersStore } from "@/lib/store/campersStore";
-import { Button } from "@/components/Button/Button";
+import { useCampersStore } from "../../../../lib/store/campersStore";
+import { Button } from "../../../../components/Button/Button";
 import css from "./page.module.css";
-import Loader from "@/components/Loader/Loader";
-import CamperCard from "@/components/Camper/CamperCard";
+import Loader from "../../../../components/Loader/Loader";
+import CamperCard from "../../../../components/Camper/CamperCard";
 import toast from "react-hot-toast";
 
 export default function CampersClient() {

@@ -1,4 +1,4 @@
-import { Camper } from "@/types/camper";
+import { Camper } from "../../types/camper";
 import css from "./VehicleList.module.css";
 
 const VehicleList = ({ camper }: { camper: Camper }) => {

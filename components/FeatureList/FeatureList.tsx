@@ -1,4 +1,4 @@
-import { Camper } from "@/types/camper";
+import { Camper } from "../../types/camper";
 
 import css from "./FeatureList.module.css";
 import SpriteIcon from "../SpriteIcon/SpriteIcon";

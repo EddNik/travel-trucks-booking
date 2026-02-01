@@ -1,9 +1,9 @@
 "use client";
-import { useSelectedCampersStore } from "@/lib/store/selectedCampersStore";
+import { useSelectedCampersStore } from "../../lib/store/selectedCampersStore";
 import Image from "next/image";
 import Link from "next/link";
 import css from "./CamperCard.module.css";
-import { Camper } from "@/types/camper";
+import { Camper } from "../../types/camper";
 import { FaStar } from "react-icons/fa";
 
 import SpriteIcon from "../SpriteIcon/SpriteIcon";

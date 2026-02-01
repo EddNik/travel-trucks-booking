@@ -1,4 +1,4 @@
-import { Camper } from "@/types/camper";
+import { Camper } from "../../types/camper";
 import Image from "next/image";
 import css from "./Galary.module.css";
 

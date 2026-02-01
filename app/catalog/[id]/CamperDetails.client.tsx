@@ -1,14 +1,14 @@
 "use client";
 
-import Gallery from "@/components/Camper/Gallery";
-import CamperInfo from "@/components/Camper/CamperInfo";
-import SpriteIcon from "@/components/SpriteIcon/SpriteIcon";
+import Gallery from "../../../components/Camper/Gallery";
+import CamperInfo from "../../../components/Camper/CamperInfo";
+import SpriteIcon from "../../../components/SpriteIcon/SpriteIcon";
 import { useParams } from "next/navigation";
-import { getCamperById } from "@/lib/api";
+import { getCamperById } from "../../../lib/api";
 import css from "./CamperDetails.module.css";
 import { useQuery } from "@tanstack/react-query";
-import Loader from "@/components/Loader/Loader";
-import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
+import Loader from "../../../components/Loader/Loader";
+import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import { FaStar } from "react-icons/fa";
 
 function CamperDetailsClient() {

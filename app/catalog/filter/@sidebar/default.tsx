@@ -3,9 +3,9 @@
 import { useState } from "react";
 import clsx from "clsx";
 
-import { useCampersStore } from "@/lib/store/campersStore";
-import { Equipment, VehicleType, Transmission } from "@/types/camper";
-import { Button } from "@/components/Button/Button";
+import { useCampersStore } from "../../../../lib/store/campersStore";
+import { Equipment, VehicleType, Transmission } from "../../../../types/camper";
+import { Button } from "../../../../components/Button/Button";
 import css from "./SidebarFilters.module.css";
 
 const EQUIPMENT: { id: Equipment; label: string; icon: string }[] = [

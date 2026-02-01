@@ -1,6 +1,6 @@
 "use client";
 
-import { Camper } from "@/types/camper";
+import { Camper } from "../../types/camper";
 import { useState } from "react";
 import FeatureList from "../FeatureList/FeatureList";
 import VehicleList from "../VehicleList/VehicleList";
