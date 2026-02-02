@@ -15,15 +15,23 @@ export async function generateMetadata({ params }: PageProps) {
   const camper = await getCamperById(id);
   return {
     title: `${camper.name} | TravelTrucks`,
-    description: `${camper.description.slice(0, 30)}`,
+    description:
+      camper.description.length > 160
+        ? `${camper.description.slice(0, 157)}...`
+        : camper.description,
     openGraph: {
       title: `${camper.name}`,
-      description: `${camper.description.slice(0, 30)}`,
+      description:
+        camper.description.length > 160
+          ? `${camper.description.slice(0, 157)}...`
+          : camper.description,
       url: `https://travel-trucks-booking-smoky.vercel.app/${id}`,
       siteName: "TravelTrucks",
       images: [
         {
-          url: "https://travel-trucks-booking-smoky.vercel.app/img/hero-bg.webp",
+          url:
+            camper.gallery?.[0]?.thumb ||
+            "https://travel-trucks-booking-smoky.vercel.app/img/hero-bg.webp",
           width: 1200,
           height: 630,
           alt: "TravelTrucks Image",

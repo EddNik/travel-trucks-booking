@@ -20,18 +20,35 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  keywords: [
+    "оренда кемперів",
+    "кемпери україна",
+    "бронювання кемперів",
+    "подорожі",
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
-    title: "TravelTrucks",
+    type: "website",
+    locale: "uk_UA",
+    title: "TravelTrucks — Оренда кемперів",
     description:
-      "Find and book the best campervans for your journey across Ukraine.",
+      "Find and book the best campervans for your journey across Ukraine. - Знайдіть та забронюйте найкращі кемпери для подорожей Україною.",
     url: "https://travel-trucks-booking-smoky.vercel.app/",
     siteName: "TravelTrucks",
     images: [
       {
-        url: "https://travel-trucks-booking-smoky.vercel.app/img/hero-bg.webp",
+        url: "/img/hero-bg.webp",
         width: 1200,
         height: 630,
-        alt: "TravelTrucks Open Graph Image",
+        alt: "TravelTrucks",
       },
     ],
   },
@@ -44,6 +61,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preconnect"
+          href="https://66b1f8e71ca8ad33d4f5f63e.mockapi.io"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://66b1f8e71ca8ad33d4f5f63e.mockapi.io"
+        />
+      </head>
       <body className={clsx(inter.className, inter.variable)}>
         <TanStackProvider>
           <Header />
