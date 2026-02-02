@@ -26,6 +26,7 @@ export const getCampers = async (
       ...(form && { form }),
       ...(transmission && { transmission }),
       ...(engine && { engine }),
+
       ...equipment?.reduce(
         (setEquip, equip) => ({ ...setEquip, [equip]: true }),
         {},

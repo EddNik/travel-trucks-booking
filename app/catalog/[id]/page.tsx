@@ -6,8 +6,6 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import CamperDetailsClient from "./CamperDetails.client";
-import css from "./CamperDetails.module.css";
-import clsx from "clsx";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -18,6 +16,20 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${camper.name} | TravelTrucks`,
     description: `${camper.description.slice(0, 30)}`,
+    openGraph: {
+      title: `${camper.name}`,
+      description: `${camper.description.slice(0, 30)}`,
+      url: `https://travel-trucks-booking-smoky.vercel.app/${id}`,
+      siteName: "TravelTrucks",
+      images: [
+        {
+          url: "https://travel-trucks-booking-smoky.vercel.app/img/hero-bg.webp",
+          width: 1200,
+          height: 630,
+          alt: "TravelTrucks Image",
+        },
+      ],
+    },
   };
 }
 
