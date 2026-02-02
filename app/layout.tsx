@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "TravelTrucks",
     images: [
       {
-        url: "https://www.pexels.com/photo/counter-in-a-yellow-truck-14855988/",
+        url: "https://travel-trucks-booking-smoky.vercel.app/img/hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "TravelTrucks Open Graph Image",
