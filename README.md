@@ -82,7 +82,7 @@ To run the project locally, follow these steps:
 ## 👤 Author
 
 Project completed as part of a technical assignment.  
-**Developer:** [Eduard Vyskrebtsov / EddNik]
+**Developer:** Eduard Vyskrebtsov / EddNik
 
 ---
 
