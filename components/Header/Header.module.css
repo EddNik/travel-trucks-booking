@@ -11,6 +11,7 @@
   align-items: center;
   width: 1440px;
   margin: 0 auto;
+  padding-left: 64px;
 }
 
 .navList {
