@@ -1,89 +1,89 @@
 # 🚐 TravelTrucks Booking
 
-**TravelTrucks** — це веб-додаток для компанії з оренди кемперів. Додаток дозволяє користувачам переглядати каталог доступних транспортних засобів, фільтрувати їх за різними критеріями, додавати в "Обране" та бронювати кемпери для подорожей.
+**TravelTrucks** — is a web application for a camper rental company. The app allows users to browse a catalog of available vehicles, filter them by various criteria, add them to "Favorites," and book campers for trips.
 
-## 📋 Опис проекту
+## 📋 Project Description
 
-Мета проекту — надати зручний інтерфейс для пошуку та оренди кемперів. Додаток складається з головної сторінки, каталогу з фільтрацією та детальної сторінки кожного кемпера з відгуками та формою бронювання.
+The goal of the project is to provide a convenient interface for searching and renting campers. The application consists of a homepage, a catalog with filtering, and a detailed page for each camper with reviews and a booking form.
 
-Проект розроблений як тестове завдання з акцентом на використання сучасних технологій фронтенд-розробки, оптимізацію та зручність користувача.
+The project was developed as a test assignment with a focus on using modern frontend technologies, optimization, and user convenience.
 
-## 🛠 Технологічний стек
+## 🛠 Tech Stack
 
-Проект реалізовано з використанням наступних технологій та бібліотек:
+The project is implemented using the following technologies and libraries:
 
 - **Core:** [Next.js](https://nextjs.org/) (App Router), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
-- **State Management:** [Zustand](https://github.com/pmndrs/zustand) (для глобального стану фільтрів та обраного)
-- **Data Fetching:** [Axios](https://axios-http.com/) / TanStack Query (для взаємодії з API)
-- **Styling:** CSS Modules (ванільний CSS з локальною областю видимості)
-- **Forms:** Formik + Yup (для валідації форм бронювання)
-- **UI Components:** `react-datepicker`, `react-hot-toast` (для нотифікацій)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand) (for global state of filters and favorites)
+- **Data Fetching:** [Axios](https://axios-http.com/) / TanStack Query (for API interaction)
+- **Styling:** CSS Modules (vanilla CSS with local scope)
+- **Forms:** Formik + Yup (for booking form validation)
+- **UI Components:** `react-datepicker`, `react-hot-toast` (for notifications)
 
-## 🌟 Основні функції
+## 🌟 Main Features
 
-### 1. 🏠 Домашня сторінка
+### 1. 🏠 Homepage
 
-- Банер із закликом до дії.
-- Кнопка "View Now" для швидкого переходу до каталогу.
+- Banner with a call to action.
+- "View Now" button for quick navigation to the catalog.
 
-### 2. 🚐 Каталог (Catalog)
+### 2. 🚐 Catalog
 
-- **Відображення карток:** Список доступних кемперів з фото, ціною та коротким описом.
-- **Фільтрація:**
-  - За локацією (Location).
-  - За типом кузова (Vehicle type: Van, Fully Integrated, Alcove).
-  - За обладнанням (Vehicle equipment: AC, Kitchen, TV, Shower, etc.).
-- **Пагінація:** Кнопка "Load More" для довантаження карток.
-- **Обране:** Можливість додавати кемпери до списку улюблених (зберігається при оновленні сторінки).
+- **Card Display:** List of available campers with photos, price, and short description.
+- **Filtering:**
+  - By location.
+  - By vehicle type (Van, Fully Integrated, Alcove).
+  - By equipment (AC, Kitchen, TV, Shower, etc.).
+- **Pagination:** "Load More" button to fetch additional cards.
+- **Favorites:** Ability to add campers to a favorites list (persisted after page reload).
 
-### 3. 📄 Детальна сторінка кемпера
+### 3. 📄 Camper Detail Page
 
-- **Галерея:** Фотографії кемпера.
-- **Інформація:** Детальний опис, технічні характеристики (двигун, трансмісія, розміри).
-- **Вкладки:**
-  - _Features:_ Характеристики та зручності.
-  - _Reviews:_ Відгуки користувачів із зірковим рейтингом.
-- **Бронювання:** Форма для відправки заявки на бронювання з валідацією полів та спливаючим повідомленням про успіх.
+- **Gallery:** Camper photos.
+- **Information:** Detailed description, technical specifications (engine, transmission, dimensions).
+- **Tabs:**
+  - _Features:_ Characteristics and amenities.
+  - _Reviews:_ User reviews with star ratings.
+- **Booking:** Form to submit a booking request with field validation and a success notification.
 
-## 🚀 Інструкція з установки та запуску
+## 🚀 Installation & Setup
 
-Щоб запустити проект локально, виконайте наступні кроки:
+To run the project locally, follow these steps:
 
-1.  **Клонуйте репозиторій:**
+1. **Clone the repository:**
 
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/travel-trucks-booking.git](https://github.com/EddNik/travel-trucks-booking.git)
-    cd travel-trucks-booking
-    ```
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/travel-trucks-booking.git](https://github.com/EddNik/travel-trucks-booking.git)
+   cd travel-trucks-booking
+   ```
 
-2.  **Встановіть залежності:**
-    Переконайтеся, що у вас встановлений Node.js.
+2. **Install dependencies:**
+   Make sure you have Node.js installed.
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-3.  **Запустіть режим розробки:**
+3. **Run in development mode:**
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
-4.  **Відкрийте в браузері:**
-    Перейдіть за посиланням [http://localhost:3000](http://localhost:3000).
+4. **Open in browser:**
+   Go to [http://localhost:3000](http://localhost:3000).
 
-## 📁 Структура проекту
+## 📁 Project Structure
 
-- `/src/app` — сторінки та маршрутизація (App Router).
-- `/src/components` — перевикористовувані UI компоненти.
-- `/src/lib` — допоміжні функції, конфігурація API та стори Zustand.
-- `/public` — статичні файли (зображення, іконки).
+- `/src/app` — pages and routing (App Router).
+- `/src/components` — reusable UI components.
+- `/src/lib` — helper functions, API configuration, and Zustand stores.
+- `/public` — static files (images, icons).
 
-## 👤 Автор
+## 👤 Author
 
-Проект виконано в рамках технічного завдання.
-**Розробник:** [Eduard Vyskrebtsov / EddNik]
+Project completed as part of a technical assignment.  
+**Developer:** [Eduard Vyskrebtsov / EddNik]
 
 ---
 
-_Примітка: Фільтрація даних виконується на стороні бекенду (MockAPI). Всі форми та запити імітують реальну роботу додатку._
+_Note: Data filtering is performed on the backend (MockAPI). All forms and requests simulate real application behavior._

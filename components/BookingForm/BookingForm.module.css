@@ -42,10 +42,35 @@
   background: var(--inputs);
 }
 
+.input::placeholder,
+.textarea::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+  opacity: 1;
+}
+
 .input:focus,
 .textarea:focus {
   color: var(--main);
   outline: none;
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.datePickerWrapper {
+  width: 100%;
+}
+
+.datePickerWrapper :global(.react-datepicker__wrapper),
+.datePickerWrapper :global(.react-datepicker__input-container) {
+  display: block;
+  width: 100%;
 }
 
 .error {
