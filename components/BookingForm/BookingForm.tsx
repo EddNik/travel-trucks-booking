@@ -20,7 +20,7 @@ interface BookingFormValues {
 const initialValues: BookingFormValues = {
   name: "",
   email: "",
-  date: new Date(),
+  date: null,
   comment: "",
 };
 

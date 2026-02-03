@@ -42,6 +42,10 @@
   background: var(--inputs);
 }
 
+.textarea {
+  resize: none;
+}
+
 .input::placeholder,
 .textarea::placeholder {
   font-family: var(--font-family);
