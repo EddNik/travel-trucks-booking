@@ -9,7 +9,8 @@
   display: flex;
   gap: 450px;
   align-items: center;
-  width: 100%;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .navList {

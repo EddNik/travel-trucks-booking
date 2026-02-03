@@ -5,8 +5,8 @@ import cssBtn from "../Button/Button.module.css";
 
 export const Hero = () => {
   return (
-    <section className={clsx(css.section, "layoutContainer")}>
-      <div className={css.heroContainer}>
+    <section className={css.section}>
+      <div className={clsx(css.heroContainer, "layoutContainer")}>
         <div className={css.titleWrapper}>
           <h1 className={css.title}>Campers of your dreams</h1>
           <p className={css.text}>
